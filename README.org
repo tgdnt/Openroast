@@ -1,0 +1,34 @@
+* Openroast
+
+This is a fork of Openroast that does nothing but add a
+requirements.txt file to install freshroastsr700 from a fork
+that implements a patch by Github user [[http://github.com/trankin][trankin]].
+
+This application cycles the heat setting on the roast between
+low and high to maintain the temperature. Some units, for
+whatever reason, don't understand it, and so just stay on high,
+burning your coffee. With trankin's patch, it will cycle between
+cool and high, instead.
+
+See [[https://github.com/roastero/openroast][upstream repo]], and the Github [[https://github.com/Roastero/Openroast/issues/73][issue]] where this was discussed
+and the solution shared by trankin [[https://github.com/trankin/Openroast/releases/tag/v1.2.1.1][here]]. Find the fork where I
+applied trankin's patch [[https://github.com/tgdnt/freshroastsr700][here]]. His solution didn't include
+installation instructions for Linux, and that is essentially
+what I am providing here.
+
+#+begin_src bash
+git clone https://github.com/tgdnt/openroast
+pip install -r openroast/requirements.txt openroast
+#+end_src
+
+Consider installing this in a [[https://docs.python.org/3/library/venv.html][venv]] or [[https://virtualenv.pypa.io/en/stable/][virtualenv]], to avoid
+changing you Python environment. Personally, I use
+[[https://github.com/pyenv/pyenv-virtualenv][pyenv-virtualenv]]. Upstream indicates you should use Python
+3.5.3, but it appears to work fine with Python 3.8.5.
+
+** Installation on ArchLinux
+
+A couple of CH341SER drivers I tried did not work for me, the
+roaster was never recognized. Following the instructions on
+[[https://github.com/juliagoda/CH341SER][juliagoda/CH341SER]] worked. Mine is an Acer Travelmate. If you're
+having this problem, try it.

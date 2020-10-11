@@ -50,11 +50,14 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/Roastero/Openroast',
+    url='https://github.com/tgdnt/Openroast',
 
     # Author details
     author='Roastero',
     author_email='admin@roastero.com',
+
+    # Maintainer
+    maintainer='Tiago Donato',
 
     # Choose your license
     license='GPLv3',
@@ -104,7 +107,7 @@ setup(
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=['PyQt5>=5.8,<5.15',
                       'matplotlib>=2.0,<2.1',
-                      'freshroastsr700>=0.2.1'],
+                      'freshroastsr700>=0.2.4.1'],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
