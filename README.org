@@ -18,7 +18,7 @@ what I am providing here.
 
 #+begin_src bash
 git clone https://github.com/tgdnt/openroast
-pip install -r openroast/requirements.txt openroast
+pip install -r openroast/requirements.txt ./openroast
 #+end_src
 
 Consider installing this in a [[https://docs.python.org/3/library/venv.html][venv]] or [[https://virtualenv.pypa.io/en/stable/][virtualenv]], to avoid
