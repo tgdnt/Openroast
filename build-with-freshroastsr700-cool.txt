@@ -1,3 +1,4 @@
 --index-url https://pypi.python.org/simple/
-
+PyQt5>=5.8,<5.15
+matplotlib>=2.0,<2.1
 git+https://github.com/tgdnt/freshroastsr700.git#egg=freshroastsr700

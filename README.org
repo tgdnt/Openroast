@@ -1,8 +1,8 @@
 * Openroast
 
-This is a fork of Openroast that does nothing but add a
-requirements.txt file to install freshroastsr700 from a fork
-that implements a patch by Github user [[http://github.com/trankin][trankin]].
+This is a fork of Openroast that adds an alternate requirements
+file to install freshroastsr700 from my fork with a patch by
+Github user [[http://github.com/trankin][trankin]] instead of from upstream.
 
 This application cycles the heat setting on the roast between
 low and high to maintain the temperature. Some units, for
@@ -18,17 +18,15 @@ what I am providing here.
 
 #+begin_src bash
 git clone https://github.com/tgdnt/openroast
-pip install -r openroast/requirements.txt ./openroast
+pip install -r openroast/build-with-freshroastsr700-cool.txt ./openroast
 #+end_src
 
 Consider installing this in a [[https://docs.python.org/3/library/venv.html][venv]] or [[https://virtualenv.pypa.io/en/stable/][virtualenv]], to avoid
 changing you Python environment. Personally, I use
 [[https://github.com/pyenv/pyenv-virtualenv][pyenv-virtualenv]]. Upstream indicates you should use Python
-3.5.3, but it appears to work fine with Python 3.8.5.
+3.5.3, but it appears to work fine with Python 3.9.
 
 ** Installation on ArchLinux
 
-A couple of CH341SER drivers I tried did not work for me, the
-roaster was never recognized. Following the instructions on
-[[https://github.com/juliagoda/CH341SER][juliagoda/CH341SER]] worked. Mine is an Acer Travelmate. If you're
-having this problem, try it.
+If Openroast doesn't detect your roaster, try the instructions on
+[[https://github.com/juliagoda/CH341SER][juliagoda/CH341SER]].
